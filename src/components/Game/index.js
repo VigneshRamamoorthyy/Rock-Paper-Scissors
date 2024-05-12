@@ -54,8 +54,8 @@ class Game extends Component {
 
   onClickChoice = (id, image) => {
     const {choicesList} = this.props
-    // console.log(Math.floor(Math.random() * 3))
-    const randomValue = Math.floor(Math.random() * 3)
+    // console.log(Math.floor(Math.random() * choicesList.length))
+    const randomValue = Math.floor(Math.random() * choicesList.length)
     if (choicesList[randomValue].id === 'ROCK' && id === 'PAPER') {
       this.setState(prevState => ({
         myChoice: [id, image],
